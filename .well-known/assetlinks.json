@@ -1,1 +1,9 @@
-TEST
+[{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target": {
+    "namespace": "android_app",
+    "package_name": "com.oasis.android.app",
+    "sha256_cert_fingerprints":
+    ["D8:C0:4A:51:AB:AD:B0:C8:3B:71:12:A3:EC:DE:AD:32:A0:02:59:55:AB:32:64:0A:86:BF:DB:A0:3F:7A:A4:74"]
+  }
+}]
