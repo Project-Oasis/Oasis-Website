@@ -1,6 +1,7 @@
+/* Default styles for Light Mode */
 body {
     font-family: Arial, sans-serif;
-    background: url('https://via.placeholder.com/1920x1080') no-repeat center center fixed; /* Placeholder image for the full background */
+    background: url('https://via.placeholder.com/1920x1080') no-repeat center center fixed;
     background-size: cover;
     display: flex;
     align-items: center;
@@ -8,17 +9,32 @@ body {
     height: 100vh;
     margin: 0;
     overflow: hidden;
-    color: #f8f8f2;  /* Lighter text for better visibility on dark background */
+    color: #333;
 }
 
 .container {
-    background-color: rgba(68, 71, 90, 0.8); /* Semi-transparent background for readability */
+    background-color: rgba(255, 255, 255, 0.8);
     padding: 50px;
     border-radius: 10px;
     text-align: center;
     width: 100%;
     max-width: 1200px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Dark Mode Styles */
+@media (prefers-color-scheme: dark) {
+    body {
+        color: #f8f8f2;
+    }
+    
+    .container {
+        background-color: rgba(68, 71, 90, 0.8);
+    }
+    
+    .app-title {
+        color: #50fa7b;
+    }
 }
 
 .app-icon {
@@ -31,7 +47,6 @@ body {
 .app-title {
     font-size: 2.5rem;
     margin-bottom: 20px;
-    color: #50fa7b;  /* Bright green color for the title */
 }
 
 .app-description {
@@ -39,7 +54,7 @@ body {
 }
 
 .playstore-link {
-    background-color: #ff79c6;  /* Pink color for the button */
+    background-color: #ff79c6;
     padding: 10px 20px;
     color: white;
     border-radius: 5px;
@@ -49,4 +64,20 @@ body {
 
 .playstore-link:hover {
     background-color: #bd50a3;
+}
+
+/* Responsive styles for mobile screens */
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+
+    .app-icon {
+        width: 100px;
+        height: 100px;
+    }
+
+    .app-title {
+        font-size: 2rem;
+    }
 }
