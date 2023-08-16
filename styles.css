@@ -1,0 +1,52 @@
+body {
+    font-family: Arial, sans-serif;
+    background: url('https://via.placeholder.com/1920x1080') no-repeat center center fixed; /* Placeholder image for the full background */
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+    color: #f8f8f2;  /* Lighter text for better visibility on dark background */
+}
+
+.container {
+    background-color: rgba(68, 71, 90, 0.8); /* Semi-transparent background for readability */
+    padding: 50px;
+    border-radius: 10px;
+    text-align: center;
+    width: 100%;
+    max-width: 1200px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.app-icon {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+}
+
+.app-title {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #50fa7b;  /* Bright green color for the title */
+}
+
+.app-description {
+    margin-bottom: 20px;
+}
+
+.playstore-link {
+    background-color: #ff79c6;  /* Pink color for the button */
+    padding: 10px 20px;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.playstore-link:hover {
+    background-color: #bd50a3;
+}
