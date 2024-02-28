@@ -1,19 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta property="al:android:url" content="https://www.oasis.net" />
-    <meta property="al:android:package" content="com.oasis.android.app" />
-    <meta property="al:android:app_name" content="Oasis">
     <title>Page Not Found</title>
-<!--     <meta http-equiv="refresh" content="5;url=https://play.google.com/store/apps/details?id=com.oasis.android.app" />
-    <script type="text/javascript">
-        var appUrl = "https://play.google.com/store/apps/details?id=com.oasis.android.app";
-        // Redirect immediately using JavaScript, if possible
-        window.location.href = appUrl;
-    </script> -->
 </head>
 <body>
     <h1>Page Not Found</h1>
-    <p>If you are not redirected, follow this <a href="https://play.google.com/store/apps/details?id=com.oasis.android.app">Install Oasis</a>.</p>
+    <p>If you're trying to open a specific part of our app, you can try the following link:</p>
+    <button id="openInApp">Open in My App</button>
+    
+    <script type="text/javascript">
+        document.getElementById('openInApp').onclick = function() {
+            // Attempt to open the current URL in the app
+            window.location.href = window.location.href;
+        };
+    </script>
 </body>
 </html>
