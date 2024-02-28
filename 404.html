@@ -47,16 +47,16 @@
 </head>
 <body>
     <div id="main-content">
-        <h1>Oops!</h1>
+        <h1>Hey there!</h1>
         <p id="message">The link you are trying to open is either invalid or requires the Oasis app to be installed.</p>
-        <a href="https://play.google.com/store/apps/details?id=your.app.id" id="app-link">Install Oasis</a>
+        <a href="https://play.google.com/store/apps/details?id=com.oasis.android.app" id="app-link">Install Oasis</a>
     </div>
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             var ua = navigator.userAgent || navigator.vendor || window.opera;
             if (/FBAV|FBAN|FB_IAB|FB4A|FBCR|FBMD|FBSN|FBSV|FBSS|FBCA|FBBR|FBFB|FBID|FBLC|FBDV|FBOP|FBLR/i.test(ua)) {
-                document.getElementById('message').textContent = 'Click on the three dots on the upper right corner and select "Open in external browser"';
+                document.getElementById('message').textContent = 'Facebook is stealing our link! Click on the three dots on the upper right corner and select "Open in external browser"';
                 document.getElementById('app-link').style.display = 'none';
             }
         });
