@@ -1,21 +1,65 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta property="al:web:url" content="https://www.oasis.net" />
-    <meta property="al:web:should_fallback" content="true" />
-    <meta property="al:android:url" content="https://www.oasis.net" />
-    <meta property="al:android:package" content="com.oasis.android.app" />
-    <meta property="al:android:app_name" content="Oasis">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Page Not Found</title>
-<!--     <meta http-equiv="refresh" content="5;url=https://play.google.com/store/apps/details?id=com.oasis.android.app" />
-    <script type="text/javascript">
-        var appUrl = "https://play.google.com/store/apps/details?id=com.oasis.android.app";
-        // Redirect immediately using JavaScript, if possible
-        window.location.href = appUrl;
-    </script> -->
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        #main-content {
+            text-align: center;
+            padding: 50px;
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        h1 {
+            color: #333;
+            font-size: 48px;
+        }
+
+        p {
+            color: #666;
+            font-size: 20px;
+            margin: 20px 0;
+        }
+
+        a {
+            display: inline-block;
+            background-color: #007bff;
+            color: #ffffff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 18px;
+        }
+
+        a:hover {
+            background-color: #0056b3;
+        }
+    </style>
 </head>
 <body>
-    <h1>Page Not Found</h1>
-    <p>If you are not redirected, follow this <a href="https://play.google.com/store/apps/details?id=com.oasis.android.app">Install Oasis</a>.</p>
+    <div id="main-content">
+        <h1>Oops!</h1>
+        <p id="message">The link you are trying to open is either invalid or requires the Oasis app to be installed.</p>
+        <a href="https://play.google.com/store/apps/details?id=your.app.id" id="app-link">Install Oasis</a>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var ua = navigator.userAgent || navigator.vendor || window.opera;
+            if (/FBAV|FBAN|FB_IAB|FB4A|FBCR|FBMD|FBSN|FBSV|FBSS|FBCA|FBBR|FBFB|FBID|FBLC|FBDV|FBOP|FBLR/i.test(ua)) {
+                document.getElementById('message').textContent = 'Click on the three dots on the upper right corner and select "Open in external browser"';
+                document.getElementById('app-link').style.display = 'none';
+            }
+        });
+    </script>
 </body>
 </html>
